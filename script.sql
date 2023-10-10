@@ -1,0 +1,35 @@
+DROP DATABASE IF EXISTS project;
+CREATE DATABASE project;
+
+USE project;
+
+DROP TABLE IF EXISTS device;
+CREATE TABLE device(     
+	id INT AUTO_INCREMENT PRIMARY KEY,     
+	type VARCHAR(255) NOT NULL,     
+	ip VARCHAR(255) NOT NULL
+);
+
+DROP TABLE IF EXISTS seismic;
+CREATE TABLE seismic (     
+	id INT AUTO_INCREMENT PRIMARY KEY,     
+	node INT NOT NULL,     
+	value INT NOT NULL,     
+	time TIMESTAMP NOT NULL
+);
+
+DROP TABLE IF EXISTS wind;
+CREATE TABLE wind (     
+	id INT AUTO_INCREMENT PRIMARY KEY,     
+	node INT NOT NULL,     
+	value INT NOT NULL,     
+	time TIMESTAMP NOT NULL
+);
+
+DROP TABLE IF EXISTS temperature;
+CREATE TABLE temperature (     
+	id INT AUTO_INCREMENT PRIMARY KEY,     
+	node INT NOT NULL,     
+	value INT NOT NULL,     
+	time TIMESTAMP NOT NULL
+);
